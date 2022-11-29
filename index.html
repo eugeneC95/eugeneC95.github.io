@@ -1,0 +1,32 @@
+<html>
+<head>
+  <script type="text/javascript">
+    
+    let HOST = location.origin.replace(/^http/, 'ws')
+    let ws = new WebSocket(HOST);
+    let el;
+
+
+    // 接続した際のコールバック
+    ws.onopen = () => {
+      console.log('WebSocket 接続成功');
+    };
+
+    ws.onmessage = (event) => {
+      const blocks = document.querySelector('#blocks');
+      if(event.data == "hi"){
+        blocks.innerHTML = event.data;
+      }
+    };
+  
+  </script>
+</head>
+
+
+<body>
+  <div id="container">
+    <h2>HI</h2>
+    <div id = "blocks"></div>
+  </div>
+</body>
+</html>
