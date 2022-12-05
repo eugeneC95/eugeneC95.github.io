@@ -18,8 +18,15 @@
       console.log(event.data);
       var tempData = JSON.parse(event.data);
       console.log(tempData.msg)
-      if(tempData.msg.includes("sigfox")){
+      if(tempData.msg.includes("sigfox_motion") && tempData.msg.includes("yes")){        
         blocks.innerHTML = event.data;
+        document.body.style.backgroundColor = "#606061";
+        blocks.innerHTML = "モーションあり"
+        blocks.style.color = "#FFF";
+      }else if(tempData.msg.includes("sigfox_motion") && tempData.msg.includes("no")){
+        document.body.style.backgroundColor = "#a9a9ab";
+        blocks.innerHTML = "モーションなし";
+        blocks.style.color = "#000";
       }
     };
   
