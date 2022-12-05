@@ -21,13 +21,13 @@
       if(tempData.msg.includes("sigfox_motion") && tempData.msg.includes("yes")){        
         blocks.innerHTML = event.data;
         document.body.style.backgroundColor = "#f2f2f2";
-        blocks.innerHTML = "モーション　あり"
+        blocks.innerHTML = "動き　あり"
         blocks.style.color = "#cc0000";
         blocks.style.fontSize = "80px"
 
       }else if(tempData.msg.includes("sigfox_motion") && tempData.msg.includes("no")){
         document.body.style.backgroundColor = "#f2f2f2";
-        blocks.innerHTML = "モーション　なし";
+        blocks.innerHTML = "動き　なし";
         blocks.style.color = "#595959";
         blocks.style.fontSize = "80px"
       }
@@ -42,6 +42,7 @@
     #blocks{
       font-size: 80px;
       text-align: center;
+      margin-top: 100px;
     }
     h1{
       margin-top: 45px;
