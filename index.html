@@ -20,13 +20,16 @@
       console.log(tempData.msg)
       if(tempData.msg.includes("sigfox_motion") && tempData.msg.includes("yes")){        
         blocks.innerHTML = event.data;
-        document.body.style.backgroundColor = "#606061";
-        blocks.innerHTML = "モーションあり"
+        document.body.style.backgroundColor = "#e3e3e6";
+        blocks.innerHTML = "モーション　あり"
         blocks.style.color = "#FFF";
+        blocks.style.fontSize = "80px"
+        
       }else if(tempData.msg.includes("sigfox_motion") && tempData.msg.includes("no")){
-        document.body.style.backgroundColor = "#a9a9ab";
-        blocks.innerHTML = "モーションなし";
-        blocks.style.color = "#000";
+        document.body.style.backgroundColor = "#e3e3e6";
+        blocks.innerHTML = "モーション　なし";
+        blocks.style.color = "#FFF";
+        blocks.style.fontSize = "80px"
       }
     };
   
@@ -36,7 +39,7 @@
 
 <body>
   <div id="container">
-    <h2>HI2</h2>
+    <h2>モーション検知</h2>
     <div id = "blocks"></div>
   </div>
 </body>
