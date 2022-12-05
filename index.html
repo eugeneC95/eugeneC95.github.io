@@ -18,10 +18,7 @@
       console.log(event.data);
       var tempData = JSON.parse(event.data);
       console.log(tempData.msg)
-
-      blocks.appendChild(event.data);
-
-      if(event.data.includes("sigfox")){
+      if(tempData.msg.includes("sigfox")){
         blocks.innerHTML = event.data;
       }
     };
