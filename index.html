@@ -15,7 +15,10 @@
     ws.onmessage = (event) => {
       const blocks = document.querySelector('#blocks');
       // blocks.innerHTML += event.data;
-      console.log(event.data)
+      console.log(event.data);
+      var tempData = JSON.parse(event.data);
+      console.log(tempData.msg)
+
       blocks.appendChild(event.data);
 
       if(event.data.includes("sigfox")){
