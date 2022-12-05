@@ -14,7 +14,8 @@
 
     ws.onmessage = (event) => {
       const blocks = document.querySelector('#blocks');
-      if(event.data == "hi"){
+      blocks.innerHTML += event.data;
+      if(event.data.includes("sigfox")){
         blocks.innerHTML = event.data;
       }
     };
