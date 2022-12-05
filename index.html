@@ -2,7 +2,7 @@
 <head>
   <script type="text/javascript">
     
-    let HOST = location.origin.replace(/^http/, 'ws')
+    let HOST = "ws://bar-app-websocket-server.herokuapp.com/"
     let ws = new WebSocket(HOST);
     let el;
 
@@ -25,7 +25,7 @@
 
 <body>
   <div id="container">
-    <h2>HI</h2>
+    <h2>HI2</h2>
     <div id = "blocks"></div>
   </div>
 </body>
